@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Form Validation</title>
+  </head>
+  <body>
+    <div class="main">
+      <h1>Sign-up Today!!</h1>
+      <div>
+        <form class="form" id="form" method="dialog">
+          <label for="fName">Full Name : </label>
+          <input
+            type="text"
+            name="fName"
+            id="fName"
+            required
+            placeholder="Enter full name "
+            minlength="5"
+            maxlength="30"
+          />
+
+          <br />
+
+          <label for="lName">Last name : </label>
+          <input
+            type="text"
+            name="lName"
+            id="lName"
+            placeholder="Enter last name"
+            required
+            maxlength="30"
+          />
+
+          <br />
+
+          <label for="email">Email : </label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter your email"
+            required
+            minlength="5"
+            maxlength="30"
+          />
+
+          <br />
+
+          <label for="phone">Phone No. : </label>
+          <input
+            type="number"
+            name="phone"
+            id="phone"
+            placeholder="+91-1234567890"
+            pattern="[0-9]{2}-[0-9]{5}-[0-9]{5}"
+            required
+          />
+
+          <br />
+
+          <label for="url">Website url : </label>
+          <input
+            type="url"
+            required
+            name="url"
+            id="url"
+            placeholder="Enter website URL"
+          />
+
+          <br />
+
+          <label for="password">Password : </label>
+          <input
+            type="password"
+            id="password"
+            required
+            placeholder="Enter your password"
+            minlength="8"
+            maxlength="30"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+            title="Enter atleast 1 uppercase,1 lowercase,1 numeric and minimun8 characters"
+          />
+
+          <br />
+
+          <label for="cpassword">Confirm Password : </label>
+          <input
+            type="password"
+            name="password"
+            id="cpassword"
+            required
+            placeholder="Enter password again"
+            minlength="8"
+            maxlength="30"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+          />
+
+          <br />
+          <button type="submit">Submit</button>
+          <br />
+        </form>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
